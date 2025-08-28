@@ -1,0 +1,254 @@
+/* Responsive Styles for Onkar's Portfolio Website */
+
+/* General Responsive Adjustments */
+@media (max-width: 1199px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title h3 {
+    font-size: 2.2rem;
+  }
+  
+  /* Portfolio Projects Section */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .section-title h3 {
+    font-size: 2rem;
+  }
+  
+  /* Why Choose Me Section */
+  .why-choose-card {
+    margin-bottom: 30px;
+    height: auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-lg-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  /* Testimonials Section */
+  .testimonial-card {
+    margin-bottom: 30px;
+  }
+  
+  /* Services Section */
+  .service-item {
+    margin-bottom: 30px;
+    padding: 30px 20px;
+  }
+  
+  .service-item h4 {
+    font-size: 1.2rem;
+  }
+  
+  /* Call to Action Section */
+  .cta-container {
+    padding: 40px 20px;
+  }
+  
+  .cta-steps {
+    flex-direction: column;
+  }
+  
+  .cta-step {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .cta-step:not(:last-child)::after {
+    display: none;
+  }
+  
+  .cta-contact-info {
+    flex-wrap: wrap;
+  }
+  
+  .cta-contact-item {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title h3 {
+    font-size: 1.8rem;
+  }
+  
+  /* Why Choose Me Section */
+  .why-choose-card {
+    padding: 20px;
+  }
+  
+  .why-choose-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Testimonials Section */
+  .testimonial-card {
+    padding: 20px;
+  }
+  
+  .testimonial-content {
+    font-size: 0.9rem;
+  }
+  
+  .author-info h4 {
+    font-size: 1rem;
+  }
+  
+  /* Skills Section */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .skill-card {
+    padding: 20px;
+  }
+  
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  /* Portfolio Projects Section */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    margin-bottom: 30px;
+  }
+  
+  .project-img img {
+    height: 200px;
+  }
+  
+  /* Call to Action Section */
+  .cta-title {
+    font-size: 1.8rem;
+  }
+  
+  .cta-contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cta-contact-item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-title h3 {
+    font-size: 1.6rem;
+  }
+  
+  /* Why Choose Me Section */
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .why-choose-card {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .why-choose-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  /* Testimonials Section */
+  .testimonial-author img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .testimonial-card {
+    padding: 15px;
+  }
+  
+  .testimonial-content {
+    font-size: 0.85rem;
+    padding-left: 15px;
+  }
+  
+  /* Skills Section */
+  .skill-card {
+    padding: 15px;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+  }
+  
+  /* Services Section */
+  .service-item {
+    padding: 20px 15px;
+  }
+  
+  .service-item h4 i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+  
+  /* Portfolio Section */
+  .project-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .project-content p {
+    font-size: 0.9rem;
+  }
+  
+  /* Call to Action Section */
+  .cta-title {
+    font-size: 1.6rem;
+  }
+  
+  .cta-step h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* General Adjustments */
+  .section {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Navigation */
+  .mobile-nav-toggle {
+    font-size: 24px;
+  }
+  
+  /* Header */
+  .header .logo h1 {
+    font-size: 24px;
+  }
+}
