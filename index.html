@@ -1929,8 +1929,8 @@
   }
 </style>
 
-    <!-- Contact Section -->
-<section id="contactss" class="contact section">
+<!-- Contact Section -->
+<section id="contact" class="contact section">
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
@@ -1982,47 +1982,83 @@
             </p>
           </div>
         </div><!-- End Info Item -->
-
       </div>
 
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <form action="https://formspree.io/f/mwpnnjnk" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4">
 
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
 
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
+            <div class="col-md-6 ">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            </div>
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+            </div>
 
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+            </div>
 
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+              <button type="submit">Send Message</button>
+            </div>
 
-                  <button type="submit">Send Message</button>
-                </div>
+          </div>
+        </form>
+      </div><!-- End Contact Form -->
 
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
+    </div>
+  </div>
+</section><!-- /Contact Section -->
 
-        </div>
 
-      </div>
+<!-- Formspree Redirect Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".php-email-form");
 
-    </section><!-- /Contact Section -->
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const action = form.getAttribute("action");
+
+    const response = await fetch(action, {
+      method: "POST",
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      // Show success message
+      document.querySelector(".sent-message").style.display = "block";
+      document.querySelector(".error-message").style.display = "none";
+      
+      // Redirect after 2 seconds
+      setTimeout(() => {
+        window.location.href = "https://onkarmininath44.github.io/MY_PORTFOLIO-/#contact";
+      }, 2000);
+      
+      form.reset();
+    } else {
+      document.querySelector(".error-message").style.display = "block";
+    }
+  });
+});
+</script>
+
+
+
 
   </main>
 
